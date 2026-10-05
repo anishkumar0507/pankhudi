@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pankhudi | Website Demos</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--crimson:#C8102E;--wine:#5A1424;--gold:#C9A24D;--ivory:#FBF7F2;--ink:#231417;--muted:#6E5B5F}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Poppins,system-ui,sans-serif;background:var(--ivory);color:var(--ink);min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:48px 16px}
+  .logo{font-family:"Great Vibes",cursive;font-size:3.2rem;color:var(--crimson);line-height:1}
+  .sub{letter-spacing:.25em;text-transform:uppercase;font-size:.72rem;color:var(--muted);margin-top:6px;text-align:center}
+  h1{font-family:"Playfair Display",serif;font-weight:500;font-size:1.6rem;margin:28px 0 24px;text-align:center}
+  .grid{display:grid;gap:18px;width:100%;max-width:920px}
+  a.card{display:block;text-decoration:none;color:inherit;background:#fff;border-radius:18px;overflow:hidden;border:1px solid #F0E4E2;box-shadow:0 20px 40px -28px rgba(90,20,36,.5);transition:transform .25s}
+  a.card:hover{transform:translateY(-4px)}
+  .card img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}
+  .body{padding:18px 20px 20px}
+  .tag{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--crimson);font-weight:600}
+  .card h2{font-family:"Playfair Display",serif;font-weight:500;font-size:1.35rem;margin:4px 0 6px}
+  .card p{font-size:.9rem;color:var(--muted);line-height:1.5}
+  .go{display:inline-block;margin-top:14px;background:var(--crimson);color:#fff;padding:.7rem 1.3rem;border-radius:999px;font-size:.88rem;font-weight:500}
+  @media (min-width:700px){.grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+  <div class="logo">Pankhudi</div>
+  <div class="sub">Sakchi · Jamshedpur</div>
+  <h1>Choose a website design</h1>
+  <div class="grid">
+    <a class="card" href="fashion/">
+      <img src="fashion/images/hero.jpg" alt="Party gowns at the Pankhudi store">
+      <div class="body">
+        <span class="tag">Design 1</span>
+        <h2>Fashion &amp; Bridal</h2>
+        <p>Built with real photos from your store: party gowns, western wear, kurtis and bridal.</p>
+        <span class="go">View design →</span>
+      </div>
+    </a>
+    <a class="card" href="bridal/">
+      <img src="bridal/images/bride_crimson.jpg" alt="Bride in a crimson and gold lehenga" style="object-position:center 30%">
+      <div class="body">
+        <span class="tag">Design 2</span>
+        <h2>Luxury Bridal Couture</h2>
+        <p>A premium bridal boutique look with lookbook, custom design journey and appointment booking.</p>
+        <span class="go">View design →</span>
+      </div>
+    </a>
+  </div>
+</body>
+</html>

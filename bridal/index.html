@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+  <title>Pankhudi Bridal & Ethnic Couture — Sakchi, Jamshedpur</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            crimson: '#C8102E',
+            wine: '#6B1E2E',
+            blush: '#F4D9D6',
+            'blush-light': '#FDF4F3',
+            gold: '#C9A24D',
+            'gold-light': '#E8D49B',
+            'gold-dark': '#9E7B28',
+            ivory: '#FBF7F2',
+            charcoal: '#222222',
+            muted: '#6E6259'
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Poppins"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #FBF7F2;
+      color: #222222;
+      font-family: 'Poppins', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    .font-script {
+      font-family: 'Playfair Display', cursive, serif;
+      font-style: italic;
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #E2C974 0%, #C9A24D 50%, #9E7B28 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gold-border-gradient {
+      border-image: linear-gradient(to right, #C9A24D, #E8D49B, #C9A24D) 1;
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    /* Tablet / desktop layer (Stitch output was mobile-only) */
+    @media (min-width: 768px) {
+      section:not(:first-of-type) > * { max-width: 1040px; margin-left: auto; margin-right: auto; }
+      #collections-section > div:last-child { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+      #collections-section > div:last-child > div:nth-child(3) { display: contents; }
+      #collections-section > div:last-child > div:last-child { grid-column: 1 / -1; }
+      #bespoke-section > div.flex-col { display: grid; grid-template-columns: repeat(2, 1fr); }
+      #why-pankhudi .grid { grid-template-columns: repeat(4, 1fr); }
+      #gallery-section .grid { grid-template-columns: repeat(3, 1fr); gap: 14px; }
+      #appointment-section > div, #visit-section > div { max-width: 720px; }
+      #visit-section img { aspect-ratio: 21 / 9; }
+      section .snap-x { justify-content: center; }
+      .max-w-xs { max-width: 28rem; }
+    }
+    @media (min-width: 1024px) {
+      section:first-of-type > div { min-height: 720px; }
+      section:first-of-type img { object-position: center 30%; }
+      #collections-section > div:last-child { grid-template-columns: repeat(4, 1fr); }
+      #why-pankhudi > div { padding: 2.5rem; }
+      body.pb-32 { padding-bottom: 0; }
+      body > div.fixed.bottom-0 { display: none; }
+      body > a.fixed.bottom-20 { bottom: 1.5rem; right: 1.5rem; }
+    }
+  </style>
+</head>
+<body class="relative min-h-screen pb-32">
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <div class="w-full bg-wine text-gold-light text-center py-2 px-3 text-[11px] font-medium tracking-widest uppercase flex items-center justify-center gap-1.5 shadow-sm">
+    <span class="material-symbols-outlined text-[14px] text-gold">auto_awesome</span>
+    <span>Celebrating 22+ Years in Sakchi, Jamshedpur • Estd. 2002</span>
+    <span class="material-symbols-outlined text-[14px] text-gold">auto_awesome</span>
+  </div>
+
+  <!-- 1. HEADER (Crimson board aesthetic with handwritten Pankhudi logo) -->
+  <header class="sticky top-0 z-40 w-full bg-crimson shadow-[0_4px_20px_rgba(107,30,46,0.35)] text-white">
+    <div class="px-4 py-3 flex items-center justify-between">
+      <!-- Mobile menu trigger -->
+      <button aria-label="Open Navigation Menu" onclick="toggleMenu()" class="w-10 h-10 flex items-center justify-center text-white/90 active:scale-95 transition-transform">
+        <span class="material-symbols-outlined text-[26px]">menu</span>
+      </button>
+
+      <!-- Center Brand Logo & Hindi Typography -->
+      <a href="#" class="flex flex-col items-center text-center group">
+        <div class="flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-gold-light" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C12 2 8 8 8 13C8 16.31 10.69 19 14 19C15.77 19 17.36 18.23 18.46 17C17.5 15.5 16.5 13 16.5 13C16.5 13 15 15 13.5 15C12.67 15 12 14.33 12 13.5C12 11.5 14 9.5 14 9.5C14 9.5 12 5.5 12 2Z"/>
+          </svg>
+          <span class="font-script text-[30px] font-bold text-white tracking-wide leading-none drop-shadow">Pankhudi</span>
+        </div>
+        <div class="flex items-center gap-2 -mt-0.5">
+          <span class="text-[11px] font-medium tracking-[0.25em] text-blush">पंखुड़ी</span>
+          <span class="text-[8px] tracking-[0.2em] text-gold-light/90 font-light">COUTURE • ESTD 2002</span>
+        </div>
+      </a>
+
+      <!-- Quick Action / Book Button -->
+      <a href="#appointment-section" class="px-3 py-1.5 rounded-full bg-gold text-wine font-semibold text-[11px] tracking-wider uppercase shadow-md flex items-center gap-1 active:scale-95 transition-transform">
+        <span class="material-symbols-outlined text-[14px]">calendar_today</span>
+        <span>Book</span>
+      </a>
+    </div>
+
+    <!-- Navigation Drawer (Collapsible) -->
+    <div id="navDrawer" class="hidden bg-wine/95 backdrop-blur-md px-5 py-4 border-t border-gold/30">
+      <nav class="flex flex-col gap-3 text-sm tracking-wider uppercase font-medium text-white/90">
+        <a href="#collections-section" onclick="toggleMenu()" class="py-1 border-b border-white/10 flex items-center justify-between">Collections <span class="material-symbols-outlined text-[16px] text-gold">chevron_right</span></a>
+        <a href="#bridal-special" onclick="toggleMenu()" class="py-1 border-b border-white/10 flex items-center justify-between">Bridal Couture <span class="material-symbols-outlined text-[16px] text-gold">chevron_right</span></a>
+        <a href="#bespoke-section" onclick="toggleMenu()" class="py-1 border-b border-white/10 flex items-center justify-between">Custom Design Process <span class="material-symbols-outlined text-[16px] text-gold">chevron_right</span></a>
+        <a href="#why-pankhudi" onclick="toggleMenu()" class="py-1 border-b border-white/10 flex items-center justify-between">Why Pankhudi <span class="material-symbols-outlined text-[16px] text-gold">chevron_right</span></a>
+        <a href="#gallery-section" onclick="toggleMenu()" class="py-1 border-b border-white/10 flex items-center justify-between">Lookbook <span class="material-symbols-outlined text-[16px] text-gold">chevron_right</span></a>
+        <a href="#visit-section" onclick="toggleMenu()" class="py-1 border-b border-white/10 flex items-center justify-between">Visit Boutique (Sakchi) <span class="material-symbols-outlined text-[16px] text-gold">chevron_right</span></a>
+        <a href="#appointment-section" onclick="toggleMenu()" class="py-2.5 mt-1 text-center bg-crimson rounded-lg text-white font-bold flex items-center justify-center gap-1">
+          <span class="material-symbols-outlined text-[18px]">event_seat</span>
+          <span>Book Bridal Appointment</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 2. HERO SECTION -->
+  <section class="relative w-full overflow-hidden bg-ivory">
+    <div class="relative min-h-[580px] w-full flex flex-col justify-end">
+      <!-- Full-width Bridal Lehenga Photography -->
+      <img src="images/bride_crimson.jpg" alt="Stunning royal Indian bride in crimson red and gold zardozi lehenga" class="absolute inset-0 w-full h-full object-cover object-top"/>
+      
+      <!-- Gradient Scrim for luxurious contrast and readability -->
+      <div class="absolute inset-0 bg-gradient-to-t from-wine via-wine/50 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-transparent"></div>
+
+      <!-- Content Container -->
+      <div class="relative z-10 p-5 pb-8 flex flex-col items-center text-center text-white">
+        <!-- Brand Crest / Petal Tagline -->
+        <div class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-white/15 backdrop-blur-md border border-gold/40 mb-3 shadow-md">
+          <span class="material-symbols-outlined text-[14px] text-gold-light">flare</span>
+          <span class="text-[10px] font-semibold tracking-[0.22em] uppercase text-gold-light">Jamshedpur's Premier Bridal Destination</span>
+        </div>
+
+        <h1 class="font-serif text-[34px] leading-[1.18] font-medium tracking-tight mb-2 max-w-xs drop-shadow-md">
+          Crafted for Your <br/>
+          <span class="font-script text-[42px] font-bold text-gold-light">Most Beautiful Day</span>
+        </h1>
+
+        <p class="text-[13px] text-blush font-light max-w-xs mb-5 opacity-95 leading-relaxed">
+          Designer bridal couture, bespoke handcrafted lehengas & timeless ethnic elegance in Jamshedpur since 2002.
+        </p>
+
+        <!-- CTAs -->
+        <div class="w-full flex flex-col gap-2.5 max-w-xs mb-5">
+          <a href="#collections-section" class="w-full h-12 flex items-center justify-center gap-2 rounded-lg bg-crimson border border-gold/60 text-white font-medium text-[13px] tracking-wider uppercase shadow-[0_4px_16px_rgba(200,16,46,0.4)] active:scale-[0.98] transition-transform">
+            <span>Explore Bridal Collection</span>
+            <span class="material-symbols-outlined text-[18px] text-gold-light">arrow_forward</span>
+          </a>
+          <a href="https://wa.me/916204122647" target="_blank" rel="noopener" class="w-full h-12 flex items-center justify-center gap-2 rounded-lg bg-white/95 backdrop-blur-md text-wine font-medium text-[13px] tracking-wider uppercase shadow-md active:scale-[0.98] transition-transform">
+            <svg class="w-5 h-5 fill-[#25D366]" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
+            <span>WhatsApp Atelier</span>
+          </a>
+        </div>
+
+        <!-- Trust Badges Bar -->
+        <div class="w-full py-2.5 px-3 rounded-xl bg-wine/80 backdrop-blur-md border border-gold/30 grid grid-cols-3 gap-1 text-center">
+          <div class="flex flex-col items-center">
+            <span class="text-gold-light text-[13px] font-bold">Since 2002</span>
+            <span class="text-[9px] text-blush tracking-wider uppercase">Sakchi Market</span>
+          </div>
+          <div class="flex flex-col items-center border-x border-gold/20">
+            <span class="text-gold-light text-[13px] font-bold">Pure Zari</span>
+            <span class="text-[9px] text-blush tracking-wider uppercase">Hand Zardozi</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <span class="text-gold-light text-[13px] font-bold">Bespoke</span>
+            <span class="text-[9px] text-blush tracking-wider uppercase">Master Toile</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PETAL FILIGREE DIVIDER -->
+  <div class="flex items-center justify-center gap-2 py-8 px-6 text-gold">
+    <div class="h-px flex-1 bg-gradient-to-r from-transparent via-gold/50 to-gold"></div>
+    <span class="text-[14px]">❦</span>
+    <span class="font-script text-[18px] text-wine px-1">पंखुड़ी</span>
+    <span class="text-[14px]">❦</span>
+    <div class="h-px flex-1 bg-gradient-to-l from-transparent via-gold/50 to-gold"></div>
+  </div>
+
+  <!-- 3. COLLECTIONS SHOWCASE GRID -->
+  <section id="collections-section" class="px-4 py-2">
+    <div class="text-center mb-6">
+      <span class="text-[10px] font-bold tracking-[0.25em] uppercase text-gold-dark">Curated Atelier Edits</span>
+      <h2 class="font-serif text-[28px] text-wine font-semibold mt-1">Our Haute Collections</h2>
+      <p class="text-[12px] text-muted max-w-xs mx-auto mt-1 leading-relaxed">
+        Handcrafted ensembles celebrating India’s rich textile heritage, regal zardozi, and contemporary flair.
+      </p>
+    </div>
+
+    <!-- Collection Cards -->
+    <div class="flex flex-col gap-5">
+      <!-- 1. Bridal Lehengas -->
+      <div id="bridal-special" class="group relative rounded-2xl overflow-hidden bg-white shadow-md border border-gold/20">
+        <div class="relative aspect-[4/5] w-full overflow-hidden">
+          <img loading="lazy" src="images/bride_crimson.jpg" alt="Pankhudi Crimson Handcrafted Bridal Lehenga" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"/>
+          <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-crimson text-white text-[10px] font-bold uppercase tracking-wider shadow">
+            Signature Bridal
+          </span>
+          <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-wine/90 via-wine/40 to-transparent p-4 text-white">
+            <span class="text-[10px] text-gold-light uppercase tracking-widest font-medium">Heirloom Craft</span>
+            <h3 class="font-serif text-[22px] font-semibold leading-tight">Bridal Lehengas</h3>
+          </div>
+        </div>
+        <div class="p-4 bg-white flex flex-col gap-2">
+          <p class="text-[12px] text-muted leading-relaxed">
+            Opulent crimson silks, pure gold zardozi, gota patti embroidery, and handcrafted velvet borders tailored for the monumental pheras.
+          </p>
+          <div class="pt-2 flex items-center justify-between border-t border-ivory">
+            <span class="text-crimson font-semibold text-[13px] font-serif">₹40,000 – ₹1,60,000</span>
+            <a href="#appointment-section" class="text-[11px] font-bold uppercase tracking-wider text-wine flex items-center gap-1 active:translate-x-1 transition-transform">
+              <span>Book Fitting</span>
+              <span class="material-symbols-outlined text-[16px] text-gold">east</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Designer Gowns -->
+      <div class="group relative rounded-2xl overflow-hidden bg-white shadow-md border border-gold/20">
+        <div class="relative aspect-[4/5] w-full overflow-hidden">
+          <img loading="lazy" src="images/bride_wine.jpg" alt="Bespoke Wine Red Velvet Designer Reception Gown" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"/>
+          <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-wine text-gold-light text-[10px] font-bold uppercase tracking-wider shadow">
+            Cocktail & Reception
+          </span>
+          <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-wine/90 via-wine/40 to-transparent p-4 text-white">
+            <span class="text-[10px] text-gold-light uppercase tracking-widest font-medium">Modern Glamour</span>
+            <h3 class="font-serif text-[22px] font-semibold leading-tight">Designer Gowns</h3>
+          </div>
+        </div>
+        <div class="p-4 bg-white flex flex-col gap-2">
+          <p class="text-[12px] text-muted leading-relaxed">
+            Architectural micro-velvet gowns, sculpted boned corsets, iridescent sequin trails, and dramatic sheer capes for high-fashion receptions.
+          </p>
+          <div class="pt-2 flex items-center justify-between border-t border-ivory">
+            <span class="text-crimson font-semibold text-[13px] font-serif">Price on request</span>
+            <a href="#appointment-section" class="text-[11px] font-bold uppercase tracking-wider text-wine flex items-center gap-1 active:translate-x-1 transition-transform">
+              <span>Book Fitting</span>
+              <span class="material-symbols-outlined text-[16px] text-gold">east</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2-Card Grid: Bridesmaid & Groomswear -->
+      <div class="grid grid-cols-2 gap-3.5">
+        <!-- Bridesmaid Outfits -->
+        <div class="rounded-xl overflow-hidden bg-white shadow-md border border-gold/20 flex flex-col">
+          <div class="relative aspect-[3/4] w-full overflow-hidden">
+            <img loading="lazy" src="images/bridesmaid_blush.jpg" alt="Blush Pink Bridesmaid Lehenga" class="w-full h-full object-cover"/>
+            <span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-blush text-wine text-[9px] font-bold uppercase tracking-wider">
+              Haldi / Mehendi
+            </span>
+          </div>
+          <div class="p-3 flex flex-col flex-1 justify-between">
+            <div>
+              <h4 class="font-serif text-[16px] font-semibold text-wine leading-snug">Bridesmaid Outfits</h4>
+              <p class="text-[11px] text-muted mt-1 leading-snug">Blush pastel anarkalis & organza floral lehengas.</p>
+            </div>
+            <div class="pt-2 mt-2 border-t border-ivory flex items-center justify-between">
+              <span class="text-[11px] font-bold text-crimson">Enquire</span>
+              <a href="#appointment-section" class="text-wine"><span class="material-symbols-outlined text-[16px]">east</span></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Men's Royal Sherwanis -->
+        <div class="rounded-xl overflow-hidden bg-white shadow-md border border-gold/20 flex flex-col">
+          <div class="relative aspect-[3/4] w-full overflow-hidden">
+            <img loading="lazy" src="images/groom_sherwani.jpg" alt="Groom Embroidered Silk Sherwani" class="w-full h-full object-cover"/>
+            <span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-gold text-wine text-[9px] font-bold uppercase tracking-wider">
+              Groom's Edit
+            </span>
+          </div>
+          <div class="p-3 flex flex-col flex-1 justify-between">
+            <div>
+              <h4 class="font-serif text-[16px] font-semibold text-wine leading-snug">Men's Ethnic Wear</h4>
+              <p class="text-[11px] text-muted mt-1 leading-snug">Hand-spun silk sherwanis, bandhgalas & royal safas.</p>
+            </div>
+            <div class="pt-2 mt-2 border-t border-ivory flex items-center justify-between">
+              <span class="text-[11px] font-bold text-crimson">Enquire</span>
+              <a href="#appointment-section" class="text-wine"><span class="material-symbols-outlined text-[16px]">east</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Party & Festive Wear Card -->
+      <div class="p-4 rounded-xl bg-gradient-to-r from-blush-light via-white to-blush-light border border-gold/30 shadow-sm flex items-center justify-between">
+        <div class="flex flex-col pr-2">
+          <span class="text-[9px] uppercase font-bold tracking-widest text-gold-dark">Trousseau Essentials</span>
+          <h4 class="font-serif text-[17px] font-semibold text-wine">Party & Festive Wear</h4>
+          <p class="text-[11px] text-muted mt-0.5">Pre-stitched drape sarees, jacket sets & shararas.</p>
+          <span class="text-crimson font-medium text-[11px] mt-1">New arrivals every season</span>
+        </div>
+        <a href="#appointment-section" class="shrink-0 px-3 py-2 rounded-lg bg-crimson text-white text-[10px] uppercase font-bold tracking-wider shadow">
+          Explore
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. BESPOKE CUSTOM DESIGN SECTION -->
+  <section id="bespoke-section" class="my-8 px-4 py-8 bg-gradient-to-b from-blush-light to-ivory border-y border-gold/30">
+    <div class="text-center mb-6">
+      <span class="text-[10px] font-bold tracking-[0.25em] uppercase text-gold-dark">Artisanal Tailoring</span>
+      <h2 class="font-serif text-[26px] text-wine font-semibold mt-1">Custom Design Journey</h2>
+      <p class="text-[12px] text-muted max-w-xs mx-auto mt-1 italic font-serif">
+        "Designed from scratch to match your vision"
+      </p>
+      <p class="text-[11px] text-charcoal/80 max-w-xs mx-auto mt-1 leading-relaxed">
+        From initial bridal sketches to the final heirloom reveal in our Sakchi boutique.
+      </p>
+    </div>
+
+    <!-- 4 Progressive Steps -->
+    <div class="flex flex-col gap-3.5 relative">
+      <!-- Step 01 -->
+      <div class="p-4 rounded-xl bg-white shadow-sm border border-gold/25 flex items-start gap-3.5">
+        <div class="w-10 h-10 rounded-full bg-crimson text-gold-light flex items-center justify-center shrink-0 font-serif font-bold text-[16px] shadow-sm">
+          01
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-center justify-between">
+            <h3 class="font-serif text-[16px] font-semibold text-wine">1. Bridal Consultation</h3>
+            <span class="text-[9px] uppercase tracking-wider font-bold text-gold-dark">Step 1</span>
+          </div>
+          <p class="text-[12px] text-muted mt-1 leading-relaxed">
+            One-on-one private styling session at our Sakchi salon to understand your ceremony moodboards, jewelry pairing, and silhouette comfort.
+          </p>
+        </div>
+      </div>
+
+      <!-- Step 02 -->
+      <div class="p-4 rounded-xl bg-white shadow-sm border border-gold/25 flex items-start gap-3.5">
+        <div class="w-10 h-10 rounded-full bg-wine text-gold-light flex items-center justify-center shrink-0 font-serif font-bold text-[16px] shadow-sm">
+          02
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-center justify-between">
+            <h3 class="font-serif text-[16px] font-semibold text-wine">2. Design & Fabric Selection</h3>
+            <span class="text-[9px] uppercase tracking-wider font-bold text-gold-dark">Step 2</span>
+          </div>
+          <p class="text-[12px] text-muted mt-1 leading-relaxed">
+            Touch tangible Benarasi katan silks, tissue organzas, and select custom hand-embroidered Zardozi, Marodi & Gota Patti motifs.
+          </p>
+        </div>
+      </div>
+
+      <!-- Step 03 -->
+      <div class="p-4 rounded-xl bg-white shadow-sm border border-gold/25 flex items-start gap-3.5">
+        <div class="w-10 h-10 rounded-full bg-crimson text-gold-light flex items-center justify-center shrink-0 font-serif font-bold text-[16px] shadow-sm">
+          03
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-center justify-between">
+            <h3 class="font-serif text-[16px] font-semibold text-wine">3. Couture Fittings & Toile</h3>
+            <span class="text-[9px] uppercase tracking-wider font-bold text-gold-dark">Step 3</span>
+          </div>
+          <p class="text-[12px] text-muted mt-1 leading-relaxed">
+            Precise 36-point body measurement and cotton muslin toile trials ensuring effortless grace, posture ease, and zero waist pinching.
+          </p>
+        </div>
+      </div>
+
+      <!-- Step 04 -->
+      <div class="p-4 rounded-xl bg-white shadow-sm border border-gold/25 flex items-start gap-3.5">
+        <div class="w-10 h-10 rounded-full bg-gold text-wine flex items-center justify-center shrink-0 font-serif font-bold text-[16px] shadow-sm">
+          04
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-center justify-between">
+            <h3 class="font-serif text-[16px] font-semibold text-wine">4. Your Dream Outfit</h3>
+            <span class="text-[9px] uppercase tracking-wider font-bold text-gold-dark">Step 4</span>
+          </div>
+          <p class="text-[12px] text-muted mt-1 leading-relaxed">
+            Delivered in our signature heirloom preservation casing with veil pins, matching latkans, and personalized styling care.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Custom inquiry CTA banner -->
+    <div class="mt-5 p-3.5 rounded-xl bg-wine text-white flex items-center justify-between shadow-md">
+      <div class="flex flex-col">
+        <span class="text-[10px] text-gold-light uppercase tracking-wider">Have a dream sketch in mind?</span>
+        <span class="font-serif text-[14px] font-semibold">Talk to our Master Couturier</span>
+      </div>
+      <a href="https://wa.me/916204122647" target="_blank" rel="noopener" class="px-3 py-1.5 rounded-lg bg-gold text-wine text-[10px] font-bold uppercase tracking-wider shadow">
+        WhatsApp Sketch
+      </a>
+    </div>
+  </section>
+
+  <!-- 5. WHY PANKHUDI SECTION -->
+  <section id="why-pankhudi" class="px-4 py-4">
+    <div class="rounded-2xl bg-gradient-to-br from-wine to-[#4d131f] text-white p-5 shadow-xl border border-gold/30">
+      <div class="text-center mb-5">
+        <span class="text-[10px] font-bold tracking-[0.25em] uppercase text-gold-light">The Atelier Legacy</span>
+        <h2 class="font-serif text-[26px] font-semibold mt-1">Why Choose Pankhudi</h2>
+        <div class="w-12 h-0.5 bg-gold mx-auto my-2 opacity-70"></div>
+        <p class="text-[12px] text-blush max-w-xs mx-auto leading-relaxed">
+          Guiding Jamshedpur brides to royal elegance for more than two decades with uncompromised craft.
+        </p>
+      </div>
+
+      <!-- 2x2 Bento Pillar Grid -->
+      <div class="grid grid-cols-2 gap-3 text-left">
+        <!-- Pillar 1 -->
+        <div class="p-3.5 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 flex flex-col gap-1.5">
+          <div class="w-8 h-8 rounded-lg bg-gold/20 flex items-center justify-center text-gold-light">
+            <span class="material-symbols-outlined text-[20px]">history_edu</span>
+          </div>
+          <h4 class="font-serif text-[15px] font-semibold text-white">20+ Years Trust</h4>
+          <p class="text-[11px] text-blush leading-relaxed">
+            Dressing generations of Steel City brides and families since our inception in Sakchi in 2002.
+          </p>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="p-3.5 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 flex flex-col gap-1.5">
+          <div class="w-8 h-8 rounded-lg bg-gold/20 flex items-center justify-center text-gold-light">
+            <span class="material-symbols-outlined text-[20px]">palette</span>
+          </div>
+          <h4 class="font-serif text-[15px] font-semibold text-white">Indian Craftsmanship</h4>
+          <p class="text-[11px] text-blush leading-relaxed">
+            Generational artisans specializing in hand Zardozi, Aari, Dabka, and Banarasi weaves.
+          </p>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="p-3.5 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 flex flex-col gap-1.5">
+          <div class="w-8 h-8 rounded-lg bg-gold/20 flex items-center justify-center text-gold-light">
+            <span class="material-symbols-outlined text-[20px]">straighten</span>
+          </div>
+          <h4 class="font-serif text-[15px] font-semibold text-white">Made-to-Measure</h4>
+          <p class="text-[11px] text-blush leading-relaxed">
+            Complimentary personalized micro-alterations until every drape & seam rests flawless.
+          </p>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="p-3.5 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 flex flex-col gap-1.5">
+          <div class="w-8 h-8 rounded-lg bg-gold/20 flex items-center justify-center text-gold-light">
+            <span class="material-symbols-outlined text-[20px]">verified</span>
+          </div>
+          <h4 class="font-serif text-[15px] font-semibold text-white">Direct Pricing</h4>
+          <p class="text-[11px] text-blush leading-relaxed">
+            Bridal range ₹40,000 – ₹1,60,000 with zero metro city inflated brand markups.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. INSTAGRAM GALLERY GRID -->
+  <section id="gallery-section" class="px-4 py-8">
+    <div class="text-center mb-5">
+      <span class="text-[10px] font-bold tracking-[0.25em] uppercase text-gold-dark">Couture In Motion</span>
+      <h2 class="font-serif text-[26px] text-wine font-semibold mt-1">The Pankhudi Lookbook</h2>
+      <!-- Instagram Handle Pill -->
+      <a href="https://www.instagram.com/pankhudi_boutique_jamshedpur/" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3 py-1 mt-2 rounded-full bg-blush text-wine text-[11px] font-semibold border border-crimson/20 shadow-sm">
+        <svg class="w-3.5 h-3.5 fill-crimson" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        <span>@pankhudi_boutique_jamshedpur</span>
+      </a>
+    </div>
+
+    <!-- 6-Image Editorial Mosaic -->
+    <div class="grid grid-cols-2 gap-2.5">
+      <!-- 1 -->
+      <div class="relative aspect-[3/4] rounded-xl overflow-hidden shadow-sm group">
+        <img loading="lazy" src="images/bride_crimson.jpg" alt="Crimson zardozi bridal lehenga" class="w-full h-full object-cover"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-wine/80 via-transparent to-transparent flex items-end p-2.5">
+          <span class="text-[11px] text-white font-medium">Crimson Zardozi</span>
+        </div>
+      </div>
+      <!-- 2 -->
+      <div class="relative aspect-[3/4] rounded-xl overflow-hidden shadow-sm group">
+        <img loading="lazy" src="images/bride_wine.jpg" alt="Wine velvet bridal lehenga" class="w-full h-full object-cover"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-wine/80 via-transparent to-transparent flex items-end p-2.5">
+          <span class="text-[11px] text-white font-medium">Wine Velvet</span>
+        </div>
+      </div>
+      <!-- 3 -->
+      <div class="relative aspect-[3/4] rounded-xl overflow-hidden shadow-sm group">
+        <img loading="lazy" src="images/bridesmaid_blush.jpg" alt="Blush pink mehendi anarkali" class="w-full h-full object-cover"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-wine/80 via-transparent to-transparent flex items-end p-2.5">
+          <span class="text-[11px] text-white font-medium">Pastel Mehendi</span>
+        </div>
+      </div>
+      <!-- 4 -->
+      <div class="relative aspect-[3/4] rounded-xl overflow-hidden shadow-sm group">
+        <img loading="lazy" src="images/groom_sherwani.jpg" alt="Ivory and gold groom sherwani" class="w-full h-full object-cover"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-wine/80 via-transparent to-transparent flex items-end p-2.5">
+          <span class="text-[11px] text-white font-medium">Ivory Sherwani</span>
+        </div>
+      </div>
+      <!-- 5 -->
+      <div class="relative aspect-[3/4] rounded-xl overflow-hidden shadow-sm group">
+        <img loading="lazy" src="images/store_gowns.jpg" alt="Party gowns on display at the Pankhudi store, Sakchi" class="w-full h-full object-cover object-[20%_50%]"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-wine/80 via-transparent to-transparent flex items-end p-2.5">
+          <span class="text-[11px] text-white font-medium">Inside our Sakchi store</span>
+        </div>
+      </div>
+      <!-- 6 -->
+      <div class="relative aspect-[3/4] rounded-xl overflow-hidden shadow-sm group">
+        <img loading="lazy" src="images/bag.jpg" alt="Pankhudi shopping bag – Your New Shopping Destination" class="w-full h-full object-cover object-center"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-wine/80 via-transparent to-transparent flex items-end p-2.5">
+          <span class="text-[11px] text-white font-medium">Your New Shopping Destination</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Follow Instagram CTA Button -->
+    <div class="mt-4 flex justify-center">
+      <a href="https://www.instagram.com/pankhudi_boutique_jamshedpur/" target="_blank" rel="noopener" class="h-10 px-5 rounded-lg bg-white border border-gold/40 text-wine text-[11px] font-bold uppercase tracking-wider flex items-center gap-1.5 shadow-sm active:scale-95 transition-transform">
+        <span class="material-symbols-outlined text-[16px] text-crimson">photo_camera</span>
+        <span>Follow @pankhudi_boutique_jamshedpur</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- 7. TESTIMONIALS CAROUSEL -->
+  <section class="px-4 py-8 bg-blush-light border-y border-gold/25">
+    <div class="text-center mb-5">
+      <span class="text-[10px] font-bold tracking-[0.25em] uppercase text-gold-dark">Love Notes</span>
+      <h2 class="font-serif text-[26px] text-wine font-semibold mt-1">Bride Testimonials</h2>
+      <p class="text-[12px] text-muted">Cherished stories from our steel city brides</p>
+      <span class="inline-block mt-2 px-2.5 py-0.5 rounded-full bg-white border border-gold/40 text-[10px] font-semibold uppercase tracking-wider text-gold-dark">Sample reviews · replace with real customer quotes</span>
+    </div>
+
+    <!-- 3 Testimonial Cards Carousel / Scroll -->
+    <div class="flex gap-3 overflow-x-auto snap-x snap-mandatory pb-3 pt-1">
+      <!-- Testimonial 1 -->
+      <div class="snap-center shrink-0 w-[290px] p-4 rounded-xl bg-white shadow-sm border border-gold/30 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-1 text-gold mb-2">
+            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+          </div>
+          <p class="text-[12px] text-charcoal/90 italic leading-relaxed">
+            "Pankhudi made my wedding lehenga beyond my wildest dreams! The fitting was so spot on and the crimson tone was exactly what I wanted. Best bridal studio in Jamshedpur!"
+          </p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-ivory flex flex-col">
+          <span class="font-serif text-[13px] font-bold text-wine">Pankhudi Bride</span>
+          <span class="text-[10px] text-muted">Sample testimonial</span>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="snap-center shrink-0 w-[290px] p-4 rounded-xl bg-white shadow-sm border border-gold/30 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-1 text-gold mb-2">
+            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+          </div>
+          <p class="text-[12px] text-charcoal/90 italic leading-relaxed">
+            "From the initial sketch to the final fitting, their patience and detailing was exceptional. Everyone at my reception was raving about the velvet gown!"
+          </p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-ivory flex flex-col">
+          <span class="font-serif text-[13px] font-bold text-wine">Pankhudi Bride</span>
+          <span class="text-[10px] text-muted">Sample testimonial</span>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="snap-center shrink-0 w-[290px] p-4 rounded-xl bg-white shadow-sm border border-gold/30 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-1 text-gold mb-2">
+            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+          </div>
+          <p class="text-[12px] text-charcoal/90 italic leading-relaxed">
+            "We got both my bridal lehenga and my husband's sherwani customized here. Truly royal quality without having to travel all the way to Delhi or Kolkata."
+          </p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-ivory flex flex-col">
+          <span class="font-serif text-[13px] font-bold text-wine">Pankhudi Bride</span>
+          <span class="text-[10px] text-muted">Sample testimonial</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. APPOINTMENT FORM SECTION -->
+  <section id="appointment-section" class="px-4 py-8">
+    <div class="rounded-2xl bg-white p-5 shadow-xl border-2 border-gold/40">
+      <div class="text-center mb-5">
+        <span class="text-[10px] font-bold tracking-[0.25em] uppercase text-gold-dark">Private Atelier Suite</span>
+        <h2 class="font-serif text-[26px] text-wine font-semibold mt-1">Book an Appointment</h2>
+        <p class="text-[12px] text-muted mt-1">
+          Reserve an exclusive 1-on-1 bridal trial & styling consultation with our master designers in Sakchi.
+        </p>
+      </div>
+
+      <!-- Form Container -->
+      <form onsubmit="handleFormSubmit(event)" class="flex flex-col gap-3.5">
+        <!-- Full Name -->
+        <div class="flex flex-col gap-1">
+          <label class="text-[11px] font-semibold text-wine uppercase tracking-wider flex items-center gap-1">
+            <span class="material-symbols-outlined text-[14px] text-gold-dark">person</span> Your Full Name *
+          </label>
+          <input type="text" required placeholder="e.g. Ananya Sen" class="w-full h-11 px-3.5 rounded-lg bg-ivory border border-gold/30 text-charcoal text-[13px] focus:outline-none focus:ring-1 focus:ring-crimson focus:bg-white"/>
+        </div>
+
+        <!-- Phone Number -->
+        <div class="flex flex-col gap-1">
+          <label class="text-[11px] font-semibold text-wine uppercase tracking-wider flex items-center gap-1">
+            <span class="material-symbols-outlined text-[14px] text-gold-dark">phone</span> Phone Number (WhatsApp) *
+          </label>
+          <input type="tel" required placeholder="+91 98765 43210" class="w-full h-11 px-3.5 rounded-lg bg-ivory border border-gold/30 text-charcoal text-[13px] focus:outline-none focus:ring-1 focus:ring-crimson focus:bg-white"/>
+        </div>
+
+        <!-- Wedding / Event Date -->
+        <div class="flex flex-col gap-1">
+          <label class="text-[11px] font-semibold text-wine uppercase tracking-wider flex items-center gap-1">
+            <span class="material-symbols-outlined text-[14px] text-gold-dark">event</span> Wedding / Event Date *
+          </label>
+          <input type="date" required class="w-full h-11 px-3.5 rounded-lg bg-ivory border border-gold/30 text-charcoal text-[13px] focus:outline-none focus:ring-1 focus:ring-crimson focus:bg-white"/>
+        </div>
+
+        <!-- Outfit Type Dropdown -->
+        <div class="flex flex-col gap-1">
+          <label class="text-[11px] font-semibold text-wine uppercase tracking-wider flex items-center gap-1">
+            <span class="material-symbols-outlined text-[14px] text-gold-dark">styler</span> Outfit Category *
+          </label>
+          <select required class="w-full h-11 px-3 rounded-lg bg-ivory border border-gold/30 text-charcoal text-[13px] focus:outline-none focus:ring-1 focus:ring-crimson focus:bg-white">
+            <option value="">Select Category</option>
+            <option value="Bridal Lehenga">Bridal Lehenga</option>
+            <option value="Designer Reception Gown">Designer Reception Gown</option>
+            <option value="Bridesmaid / Festive Ensemble">Bridesmaid / Festive Wear</option>
+            <option value="Men's Royal Sherwani">Men's Royal Sherwani</option>
+            <option value="Custom Bespoke Trousseau">Custom Bespoke Trousseau</option>
+          </select>
+        </div>
+
+        <!-- Personal Message -->
+        <div class="flex flex-col gap-1">
+          <label class="text-[11px] font-semibold text-wine uppercase tracking-wider flex items-center gap-1">
+            <span class="material-symbols-outlined text-[14px] text-gold-dark">edit_note</span> Notes / Bridal Vision
+          </label>
+          <textarea rows="3" placeholder="Tell us your ceremony theme, color preferences, or specific styling ideas..." class="w-full p-3 rounded-lg bg-ivory border border-gold/30 text-charcoal text-[13px] focus:outline-none focus:ring-1 focus:ring-crimson focus:bg-white resize-none"></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="mt-2 w-full h-12 rounded-xl bg-crimson border border-gold text-white font-bold text-[12px] uppercase tracking-widest shadow-lg flex items-center justify-center gap-2 active:scale-[0.98] transition-transform">
+          <span class="material-symbols-outlined text-[18px] text-gold-light">auto_awesome</span>
+          <span>Request VIP Bridal Appointment</span>
+        </button>
+
+        <p class="text-[11px] text-center text-muted mt-1">
+          ✓ Free consultation • Your request opens in WhatsApp
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <!-- 9. VISIT US (Sakchi, Jamshedpur) -->
+  <section id="visit-section" class="px-4 py-6 bg-ivory">
+    <div class="rounded-2xl bg-white p-5 shadow-md border border-gold/30">
+      <img loading="lazy" src="images/storefront.jpg" alt="Pankhudi storefront above the Titan showroom, Sakchi" class="-mx-5 -mt-5 mb-4 w-[calc(100%+2.5rem)] max-w-none aspect-[16/9] object-cover rounded-t-2xl"/>
+      <div class="flex items-center gap-2 mb-3">
+        <div class="w-9 h-9 rounded-full bg-crimson/10 flex items-center justify-center text-crimson">
+          <span class="material-symbols-outlined text-[22px]">location_on</span>
+        </div>
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-gold-dark">Atelier Location</span>
+          <h2 class="font-serif text-[22px] font-semibold text-wine">Visit Our Boutique</h2>
+        </div>
+      </div>
+
+      <!-- Address Details -->
+      <div class="flex flex-col gap-3 text-[13px] text-charcoal/90 mt-2">
+        <div class="flex items-start gap-2.5">
+          <span class="material-symbols-outlined text-[18px] text-crimson shrink-0 mt-0.5">pin_drop</span>
+          <div>
+            <span class="font-semibold text-wine block">Pankhudi Couture</span>
+            <span>Above Titan Showroom (Jay Watch Co.), near Sreeleather, Sakchi Market Rd, SNP Area, Sakchi, Jamshedpur, Jharkhand 831001</span>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2.5">
+          <span class="material-symbols-outlined text-[18px] text-crimson shrink-0">schedule</span>
+          <div>
+            <span class="font-semibold text-wine">Boutique Hours: </span>
+            <span>Open daily 10:00 AM – 9:00 PM</span>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2.5">
+          <span class="material-symbols-outlined text-[18px] text-crimson shrink-0">call</span>
+          <div>
+            <span class="font-semibold text-wine">Phone: </span>
+            <a href="tel:+916204122647" class="text-crimson font-bold underline">+91 62041 22647</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Visual Map Card / Route Box -->
+      <div class="mt-4 rounded-xl overflow-hidden border border-gold/30 bg-blush-light p-4 text-center flex flex-col items-center">
+        <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-crimson shadow mb-2">
+          <span class="material-symbols-outlined text-[28px]">explore</span>
+        </div>
+        <span class="font-serif text-[15px] font-semibold text-wine">Sakchi Market Landmark</span>
+        <p class="text-[11px] text-muted max-w-xs mt-0.5">First floor, above the Titan showroom. Look for the red Pankhudi board.</p>
+        
+        <!-- Get Directions Link -->
+        <a href="https://maps.app.goo.gl/Zi5V1UuZ4YtAyewz9" target="_blank" rel="noopener" class="mt-3 inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-wine text-gold-light text-[11px] font-bold uppercase tracking-wider shadow active:scale-95 transition-transform">
+          <span class="material-symbols-outlined text-[16px]">directions</span>
+          <span>Get Directions on Google Maps</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. LUXURY FOOTER -->
+  <footer class="mt-6 bg-wine text-white pt-8 pb-10 px-5 border-t-2 border-gold/40">
+    <div class="flex flex-col items-center text-center">
+      <!-- Footer Brand Logo -->
+      <div class="flex items-center gap-1.5">
+        <svg class="w-4 h-4 text-gold-light" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2C12 2 8 8 8 13C8 16.31 10.69 19 14 19C15.77 19 17.36 18.23 18.46 17C17.5 15.5 16.5 13 16.5 13C16.5 13 15 15 13.5 15C12.67 15 12 14.33 12 13.5C12 11.5 14 9.5 14 9.5C14 9.5 12 5.5 12 2Z"/>
+        </svg>
+        <span class="font-script text-[32px] font-bold text-white tracking-wide leading-none">Pankhudi</span>
+      </div>
+      <span class="text-[11px] font-medium tracking-[0.25em] text-blush mt-1">पंखुड़ी BRIDAL COUTURE</span>
+      <p class="text-[11px] text-gold-light/90 max-w-xs mt-2 italic font-serif">
+        "Soft, elegant, feminine — rooted in Indian craftsmanship."
+      </p>
+
+      <!-- Quick Nav Links -->
+      <div class="flex flex-wrap justify-center gap-x-4 gap-y-2 my-5 text-[11px] tracking-wider uppercase text-blush font-medium">
+        <a href="#collections-section" class="hover:text-white">Bridal Lehengas</a>
+        <span>•</span>
+        <a href="#collections-section" class="hover:text-white">Designer Gowns</a>
+        <span>•</span>
+        <a href="#bespoke-section" class="hover:text-white">Custom Tailoring</a>
+        <span>•</span>
+        <a href="#visit-section" class="hover:text-white">Sakchi Boutique</a>
+      </div>
+
+      <!-- Social Icons (Instagram & Facebook) -->
+      <div class="flex items-center gap-3 my-2">
+        <a href="https://www.instagram.com/pankhudi_boutique_jamshedpur/" target="_blank" rel="noopener" aria-label="Pankhudi Instagram" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-gold-light border border-gold/30 active:scale-95 transition-transform">
+          <svg class="w-4 h-4 fill-currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/Pankhudi.fashion/" target="_blank" rel="noopener" aria-label="Pankhudi Facebook" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-gold-light border border-gold/30 active:scale-95 transition-transform">
+          <svg class="w-4 h-4 fill-currentColor" viewBox="0 0 24 24"><path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.688 5H18V0h-3.808C10.597 0 9 1.583 9 4.615V8z"/></svg>
+        </a>
+        <a href="https://wa.me/916204122647" target="_blank" rel="noopener" aria-label="Pankhudi WhatsApp" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-gold-light border border-gold/30 active:scale-95 transition-transform">
+          <svg class="w-4 h-4 fill-currentColor" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
+        </a>
+      </div>
+
+      <!-- Contact direct info -->
+      <span class="text-[12px] text-gold-light font-medium mt-1">Atelier Call: +91 62041 22647</span>
+
+      <div class="w-full h-px bg-white/10 my-4"></div>
+
+      <!-- Copyright -->
+      <p class="text-[10px] text-blush/80 tracking-wider">
+        © 2026 Pankhudi, Jamshedpur. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON (Bottom-Right) -->
+  <a href="https://wa.me/916204122647" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" class="fixed bottom-20 right-4 z-50 w-13 h-13 p-3 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-[0_6px_20px_rgba(37,211,102,0.45)] ring-2 ring-white active:scale-90 transition-transform">
+    <svg class="w-7 h-7 fill-white" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
+  </a>
+
+  <!-- STICKY MOBILE BOTTOM BAR ("Call Now" and "Book Appointment") -->
+  <div class="fixed bottom-0 inset-x-0 z-50 bg-white/95 backdrop-blur-lg border-t border-gold/30 px-3 py-2.5 flex items-center gap-2.5 shadow-[0_-4px_16px_rgba(0,0,0,0.08)]">
+    <!-- Call Now button -->
+    <a href="tel:+916204122647" class="flex-1 h-11 px-2 rounded-lg bg-ivory border border-gold/50 text-wine font-semibold text-[11px] uppercase tracking-wider flex items-center justify-center gap-1.5 active:scale-95 transition-transform">
+      <span class="material-symbols-outlined text-[18px] text-crimson">call</span>
+      <span>Call Atelier</span>
+    </a>
+    <!-- Book Bridal Trial CTA -->
+    <a href="#appointment-section" class="flex-[1.4] h-11 px-2 rounded-lg bg-crimson border border-gold/40 text-white font-bold text-[11px] uppercase tracking-wider flex items-center justify-center gap-1.5 shadow-md active:scale-95 transition-transform">
+      <span class="material-symbols-outlined text-[18px] text-gold-light">auto_awesome</span>
+      <span>Book Bridal Trial</span>
+    </a>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const drawer = document.getElementById('navDrawer');
+      drawer.classList.toggle('hidden');
+    }
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const f = e.target.elements;
+      const msg = `Hi Pankhudi, I'd like to book an appointment.\nName: ${f[0].value}\nPhone: ${f[1].value}\nDate: ${f[2].value}\nOutfit: ${f[3].value}\nNotes: ${f[4].value}`;
+      window.open('https://wa.me/916204122647?text=' + encodeURIComponent(msg), '_blank');
+    }
+  </script>
+</body>
+</html>
